@@ -255,3 +255,10 @@ function monthName(monthNumb) {
     }
 }
 
+function getDark(){
+    const body = document.querySelector(".main-body");
+    const header = document.querySelector(".header");
+    header.className = "header header-dark";
+    body.className = "main-body body-dark"
+}
+

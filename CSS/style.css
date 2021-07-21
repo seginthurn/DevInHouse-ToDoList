@@ -40,7 +40,7 @@ body {
 
 #taskInputField {
     background-color: lightgray;
-    width: 65vw;
+    width: 45vw;
     height: 5vh;
     border: 1px solid lightgray;
     padding-left: 20px;
@@ -66,7 +66,6 @@ body {
     font-size: 20px;
     margin-top: 10px;
     border-radius: 5px;
-    padding: 5px;
 }
 
 .card>span {
@@ -117,5 +116,12 @@ body {
 
 #day-time {
     color: white;
+}
+
+@media (max-width: px) {
+    .card{
+        min-height: 10vh;
+    }
+    
 }
 
