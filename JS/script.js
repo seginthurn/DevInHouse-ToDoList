@@ -60,14 +60,10 @@ function taskComplete(cardId) {
     var taskId = splitTask(cardId);
     var switcher = JSON.parse(localStorage.getItem(taskId));
     if (checkbox.checked) {
-        spanCard.style.textDecoration = "line-through";
-        spanCard.style.textDecorationColor = "grey";
-        spanCard.style.color = "grey";
+        card.className = "card card-checked"
         switcher[2] = "true";
     } else {
-        card.style.backgroundColor = "#F5F5F5";
-        spanCard.style.textDecoration = "none";
-        spanCard.style.color = "black";
+        card.className = "card"
         switcher[2] = "false";
     }
     switcher = JSON.stringify(switcher);
@@ -162,11 +158,8 @@ function recreateTasks(loadedId, loadedTaskValue, taskIsDone) {
     newTask.appendChild(span);
     newTask.appendChild(button);
     if (taskIsDone == "true") {
+        newTask.className = "card card-checked"
         newTask.firstChild.checked = "true";
-        span.style.textDecoration = "line-through";
-        span.style.textDecorationColor = "grey";
-        span.style.color = "grey";
-
     }
 }
 
@@ -197,6 +190,9 @@ function showDate() {
 function dayName(dayNumb) {
     switch (dayNumb) {
 
+        case 0:
+            return "Domingo";
+
         case 1:
             return "Segunda-Feira";
 
@@ -215,44 +211,42 @@ function dayName(dayNumb) {
         case 6:
             return "Sábado";
 
-        case 7:
-            return "Domingo";
     }
 }
 
 function monthName(monthNumb) {
     switch (monthNumb) {
 
-        case 1:
+        case 0:
             return "Janeiro";
 
-        case 2:
+        case 1:
             return "Fevereiro";
 
-        case 3:
+        case 2:
             return "Março";
-        case 4:
+        case 3:
             return "Abril";
 
-        case 5:
+        case 4:
             return "Maio";
 
-        case 6:
+        case 5:
             return "Junho";
 
-        case 7:
+        case 6:
             return "Julho";
 
-        case 8:
+        case 7:
             return "Agosto";
 
-        case 9:
+        case 8:
             return "Setembro";
 
-        case 10:
+        case 9:
             return "Outubro";
 
-        case 11:
+        case 10:
             return "Novembro";
 
         case 12:
