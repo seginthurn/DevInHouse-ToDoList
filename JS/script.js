@@ -1,5 +1,6 @@
 /* Início do código */
 var taskId;
+showDate();
 
 /* Verifica estado do localStorage e cria elemento TaskId */
 if (!localStorage.getItem("taskId")) {
@@ -176,48 +177,87 @@ function splitTask(cardId) {
     return cardSplitted[1];
 }
 
-function showDate(){
+function showDate() {
     var date = new Date();
     var weekDay = date.getDay();
     var newDay = date.getDate();
     var newMonth = date.getMonth();
     var newYear = date.getFullYear();
-    switch(weekDay){
+    weekDay = dayName(weekDay);
+    newMonth = monthName(newMonth);
+
+
+
+    var actualDay = document.getElementById("day-time");
+    actualDay.innerText = weekDay + ", " + newDay + " de " + newMonth + " de " + newYear;
+
+}
+
+
+function dayName(dayNumb) {
+    switch (dayNumb) {
+
         case 1:
-        weekDay = "Segunda-Feira";
-        break;
+            return "Segunda-Feira";
 
         case 2:
-        weekDay = "Terça-Feira";
-        break;
+            return "Terça-Feira";
 
         case 3:
-        weekDay = "Quarta-Feira";
-        break;
+            return "Quarta-Feira";
 
         case 4:
-        weekDay = "Quinta-Feira";
-        break;
+            return "Quinta-Feira";
 
         case 5:
-        weekDay = "Sexta-Feira";
-        break;
+            return "Sexta-Feira";
 
         case 6:
-        weekDay = "Sábado";
-        break;
+            return "Sábado";
 
         case 7:
-        weekDay = "Domingo";
-        break;
+            return "Domingo";
+    }
+}
 
+function monthName(monthNumb) {
+    switch (monthNumb) {
+
+        case 1:
+            return "Janeiro";
+
+        case 2:
+            return "Fevereiro";
+
+        case 3:
+            return "Março";
+        case 4:
+            return "Abril";
+
+        case 5:
+            return "Maio";
+
+        case 6:
+            return "Junho";
+
+        case 7:
+            return "Julho";
+
+        case 8:
+            return "Agosto";
+
+        case 9:
+            return "Setembro";
+
+        case 10:
+            return "Outubro";
+
+        case 11:
+            return "Novembro";
+
+        case 12:
+            return "Dezembro";
 
     }
-
-/*     sw
-    var actualDay = document.getElementById("day-time");
-    actualDay.innerText = weekDay + ", " + newDay + " de " + newMonth + " de " + newYear; */
-
-
 }
 
