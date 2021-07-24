@@ -170,6 +170,7 @@ function splitTask(cardId) {
     return cardSplitted[1];
 }
 
+/* Mostra a data no cabeçalho */
 function showDate() {
     var date = new Date();
     var weekDay = date.getDay();
@@ -178,9 +179,6 @@ function showDate() {
     var newYear = date.getFullYear();
     weekDay = dayName(weekDay);
     newMonth = monthName(newMonth);
-
-
-
     var actualDay = document.getElementById("day-time");
     actualDay.innerText = weekDay + ", " + newDay + " de " + newMonth + " de " + newYear;
 
