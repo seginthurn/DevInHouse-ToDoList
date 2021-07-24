@@ -21,7 +21,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #4CAF50;
+    background-color: #009688;
     width: 100vw;
     height: 10vh;
     margin: 0 auto;
@@ -46,12 +46,14 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-size: large;
+    color: gray;
 }
 
 #taskInputField:focus {
     outline: none !important;
-    border: 1px solid green;
+    border: 1px solid #00796B;
     background-color: white;
+    color: black;
 }
 
 .card {
@@ -93,7 +95,7 @@ body {
 }
 
 .deleteButton {
-    color: red;
+    color: tomato;
     background-color: transparent;
     cursor: pointer;
     margin-right: 5vw;
@@ -109,7 +111,7 @@ body {
 #taskForm>button {
     width: 12.8vw;
     height: 5.4vh;
-    background-color: #388E3C;
+    background-color: #00796B;
     color: white;
     cursor: pointer;
 }
