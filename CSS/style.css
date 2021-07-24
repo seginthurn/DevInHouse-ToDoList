@@ -21,7 +21,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #00BCD4;
+    background-color: #009688;
     width: 100vw;
     height: 10vh;
     margin: 0 auto;
@@ -33,29 +33,28 @@ body {
     margin-left: 5vw;
 }
 
-.header > #day-time{
+.header>#day-time {
     align-self: center;
     margin-right: 5vw;
 }
 
 #taskInputField {
     background-color: lightgray;
-    width: 65vw;
-    height: 7vh;
+    width: 45vw;
+    height: 5vh;
     border: 1px solid lightgray;
-    margin-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: large;
+    color: gray;
 }
 
 #taskInputField:focus {
     outline: none !important;
-    border:1px solid green;
+    border: 1px solid #00796B;
     background-color: white;
+    color: black;
 }
-
-
 
 .card {
     display: flex;
@@ -64,7 +63,8 @@ body {
     align-content: flex-start;
     background-color: #F5F5F5;
     width: 80vw;
-    height: 10vh;
+    min-height: 5vw;
+    height: auto;
     font-size: 20px;
     margin-top: 10px;
     border-radius: 5px;
@@ -78,27 +78,52 @@ body {
     color: #212121;
 }
 
+.card-checked {
+    text-decoration: line-through;
+    text-decoration-color: gray;
+}
+
+.card-checked>span {
+    color: gray;
+}
+
 .checkbox-card {
-    margin-left: 2vw;
+    margin-left: 5vw;
+    margin-right: 1vw;
     width: 15px;
     height: 15px;
 }
 
 .deleteButton {
-    color: red;
+    color: tomato;
     background-color: transparent;
     cursor: pointer;
+    margin-right: 5vw;
+}
+
+#taskForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 #taskForm>button {
-    width: 5vw;
-    height: 5vh;
-    background-color: white;
-    color: green;
+    width: 12.8vw;
+    height: 5.4vh;
+    background-color: #00796B;
+    color: white;
     cursor: pointer;
 }
 
-#day-time{
+#day-time {
     color: white;
+}
+
+@media (max-width: px) {
+    .card{
+        min-height: 10vh;
+    }
+    
 }
 
