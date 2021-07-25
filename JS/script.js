@@ -3,6 +3,7 @@ var taskId;
 showDate();
 
 /* Verifica estado do localStorage e cria elemento TaskId */
+
 if (!localStorage.getItem("taskId")) {
     localStorage.setItem("taskId", 0);
     taskId = 0;
@@ -72,7 +73,6 @@ function taskComplete(cardId) {
 
 /* Cria novo checkbox para nova tarefa / tarefa recrida */
 function newCheckbox(newId) {
-    console.log(newId);
     var newCheckbox = document.createElement('input');
     newCheckbox.type = "checkbox";
     newCheckbox.id = "checkbox-card-" + newId;
@@ -166,10 +166,10 @@ function recreateTasks(loadedId, loadedTaskValue, taskIsDone) {
 /* Separa o prefixo "card-" do valor da tarefa para ser utilizado nas funções */
 function splitTask(cardId) {
     var cardSplitted = cardId.split("-", 2);
-    console.log(cardSplitted);
     return cardSplitted[1];
 }
 
+/* Mostra a data no cabeçalho */
 function showDate() {
     var date = new Date();
     var weekDay = date.getDay();
@@ -178,15 +178,12 @@ function showDate() {
     var newYear = date.getFullYear();
     weekDay = dayName(weekDay);
     newMonth = monthName(newMonth);
-
-
-
     var actualDay = document.getElementById("day-time");
     actualDay.innerText = weekDay + ", " + newDay + " de " + newMonth + " de " + newYear;
 
 }
 
-
+/* Converte número do dia para texto */
 function dayName(dayNumb) {
     switch (dayNumb) {
 
@@ -214,6 +211,7 @@ function dayName(dayNumb) {
     }
 }
 
+/* Converte número do mês para texto */
 function monthName(monthNumb) {
     switch (monthNumb) {
 
